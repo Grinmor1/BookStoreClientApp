@@ -9,6 +9,8 @@ With the following command the angular-cli will be installed globally in your ma
 
     npm install -g @angular/cli
 
+    npm i
+    
 # To run the Development UI Server
 
 To run the frontend part of our code, we will use the Angular CLI:
