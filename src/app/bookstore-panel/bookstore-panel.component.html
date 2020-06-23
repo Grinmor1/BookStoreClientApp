@@ -1,0 +1,59 @@
+<div class="book-items" *ngIf="books$ | async as books">
+
+  
+    <table>
+        <tr class="title-row">
+            <th class="title">
+                <p>Name</p>
+            </th>
+            <th class="title">
+                <p>Author</p>
+            </th>
+            <th class="title">
+                <p>Number pages</p>
+            </th>
+            <th class="title">
+                <p>Rating</p>
+            </th>
+        </tr>
+
+        <tr *ngFor="let book of books">
+            <td>{{book.name}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.numberPages}}</td>
+            <td>{{book.rating}}</td>
+    </tr>
+</table>
+    
+ <div class="delete-form-group">
+    <label for="deleteForm">Choose book for deleting:</label>
+    <select [formControl]="deleteForm" class="form-control">
+     <option>select book</option>
+        <option *ngFor="let book of books" label="{{book.name}}">{{book.id}}</option>
+                </select>
+
+</div>
+<button  class="delete-button" (click)="deleteBook() ">Delete</button>
+
+<form class="add-form-group" [formGroup]="addForm" (ngSubmit)="addBook()">
+
+    <label>
+        Name:
+        <input type="text" formControlName="name">
+    </label>
+    <label>
+        Author:
+        <input type="text" formControlName="author">
+    </label>
+    <label>
+        Number Pages:
+        <input type="text" formControlName="numberPages">
+    </label>
+    <label>
+        Rating:
+        <input type="text" formControlName="rating">
+    </label>
+    <button class="add-button" type="submit" [disabled]="!addForm.valid">Add book</button>
+</form>
+</div>
+

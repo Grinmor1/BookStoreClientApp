@@ -1,0 +1,55 @@
+.book-items {
+   
+}
+
+
+table {
+    border-collapse: collapse;
+    margin: 20px;
+    max-height: 100px;
+    overflow: scroll;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .delete-form-group{
+margin: 10px ;
+width: 350px;
+  }
+
+  .delete-button{
+    background-color: #a30000; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+  }
+
+  
+  .add-form-group{
+   display: grid;
+   margin: 20px;
+  }
+
+
+  .add-button{
+    background-color: #4CAF50; /* Green */
+    width: 160px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px;
+  }
